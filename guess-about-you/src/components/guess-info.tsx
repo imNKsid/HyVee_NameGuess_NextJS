@@ -51,7 +51,7 @@ const GuessInfo = () => {
       <form onSubmit={handleFormSubmit} className={styles.form}>
         <div className={styles.description}>
           <label>
-            Name:
+            Enter Your Name:
             <input
               type="text"
               value={name}
@@ -60,18 +60,28 @@ const GuessInfo = () => {
           </label>
         </div>
         <div>
-          <button
-            type="submit"
-            className={styles.button}
-            // style={{ borderRadius: "10px", padding: 10, fontSize: 18 }}
-          >
+          <button type="submit" className={styles.button}>
             Guess Info
           </button>
         </div>
       </form>
-      {age && <p>Guessed Age: {age}</p>}
-      {gender && <p>Guessed Gender: {gender}</p>}
-      {country && <p>Guessed Country: {country}</p>}
+      <div className={styles.info}>
+        {age && (
+          <p>
+            Guessed Age: <span>{age}</span>
+          </p>
+        )}
+        {gender && (
+          <p>
+            Guessed Gender: <span>{gender}</span>
+          </p>
+        )}
+        {country && (
+          <p>
+            Guessed Country: <span>{country}</span>
+          </p>
+        )}
+      </div>
     </>
   );
 };
