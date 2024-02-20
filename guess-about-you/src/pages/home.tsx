@@ -5,7 +5,7 @@ import styles from "../app/page.module.css";
 const HomePage = () => {
   return (
     <div>
-      <h1 className={styles.heading}>Name Guessing App</h1>
+      <h1 className={styles.heading}>Information Prediction App</h1>
       <GuessInfo />
     </div>
   );
