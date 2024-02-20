@@ -80,8 +80,15 @@ export default GuessInfo;
 
 const codeToCountry = (data: any[]) => {
   const countriesArray = data.map((country: { country_id: string }) => {
-    return countryCodes[country.country_id];
+    return countryCodes[country.country_id as keyof typeof countryCodes];
   });
   const countries = countriesArray.join(", ");
   return countries;
 };
+
+// Check the line, return countryCodes[country.country_id as keyof typeof countryCodes];
+// Earlier it was like this - return countryCodes[country.country_id];
+// The earlier line was throwing a TypeScript warning that says TypeScript doesn't know
+// if country_id will always be a valid key for countryCodes.
+// To fix the warning, I've put "as keyof typeof countryCodes" informing TypeScript that
+// I'm sure the country_id will be a valid key in countryCodes.
