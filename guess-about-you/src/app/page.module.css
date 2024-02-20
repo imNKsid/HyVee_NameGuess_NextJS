@@ -1,0 +1,132 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6rem;
+  min-height: 100vh;
+}
+
+.description {
+  display: block;
+  justify-content: inherit;
+  align-items: inherit;
+  font-size: 0.85rem;
+  max-width: var(--max-width);
+  width: 100%;
+  z-index: 2;
+  font-family: var(--font-mono);
+}
+
+.form {
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.description label {
+  position: relative;
+  font-weight: 700;
+  font-size: larger;
+  font-family: var(--font-mono);
+}
+
+.description input {
+  padding: 1rem;
+  background-color: rgba(var(--callout-rgb), 0.5);
+  border: 1px solid rgba(var(--callout-border-rgb), 0.9);
+  border-radius: var(--border-radius);
+  font-weight: 700;
+  font-size: larger;
+  margin-left: 0.5rem;
+  text-transform: capitalize;
+}
+
+.button {
+  position: relative;
+  margin: 6rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  font-size: larger;
+  font-family: var(--font-mono);
+}
+
+.info p {
+  margin-bottom: 0.5rem;
+}
+
+.info span {
+  color: aqua;
+  text-transform: capitalize;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .button {
+    margin: 6rem;
+    border-radius: var(--border-radius);
+    font-size: large;
+    white-space: nowrap;
+  }
+  .heading {
+    text-align: center;
+  }
+  .description label {
+    font-weight: 300;
+    font-size: small;
+  }
+  .description input {
+    padding: 1rem;
+    background-color: rgba(var(--callout-rgb), 0.5);
+    border: 1px solid rgba(var(--callout-border-rgb), 0.9);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: small;
+    margin-left: 0.5rem;
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
+
+/* Enable hover only on non-touch devices */
+@media (hover: hover) and (pointer: fine) {
+  .card:hover {
+    background: rgba(var(--card-rgb), 0.1);
+    border: 1px solid rgba(var(--card-border-rgb), 0.15);
+  }
+
+  .card:hover span {
+    transform: translateX(4px);
+  }
+}
+
+@media (prefers-reduced-motion) {
+  .card:hover span {
+    transform: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .vercelLogo {
+    filter: invert(1);
+  }
+
+  .logo {
+    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
