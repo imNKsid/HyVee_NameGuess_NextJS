@@ -40,6 +40,7 @@
   font-weight: 700;
   font-size: larger;
   margin-left: 0.5rem;
+  text-transform: capitalize;
 }
 
 .button {
@@ -51,16 +52,38 @@
   font-family: var(--font-mono);
 }
 
+.info p {
+  margin-bottom: 0.5rem;
+}
+
+.info span {
+  color: aqua;
+  text-transform: capitalize;
+}
+
 /* Mobile */
 @media (max-width: 700px) {
   .button {
-    position: relative;
     margin: 6rem;
-    padding: 1rem;
     border-radius: var(--border-radius);
     font-size: large;
-    font-family: var(--font-mono);
     white-space: nowrap;
+  }
+  .heading {
+    text-align: center;
+  }
+  .description label {
+    font-weight: 300;
+    font-size: small;
+  }
+  .description input {
+    padding: 1rem;
+    background-color: rgba(var(--callout-rgb), 0.5);
+    border: 1px solid rgba(var(--callout-border-rgb), 0.9);
+    border-radius: var(--border-radius);
+    font-weight: 700;
+    font-size: small;
+    margin-left: 0.5rem;
   }
 }
 
